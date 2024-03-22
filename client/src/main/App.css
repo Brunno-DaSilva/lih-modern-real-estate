@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap");
+
+:root {
+  --ff-body: "Inter", sans-serif;
+  --ff-title: "Work Sans", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--ff-body);
+  background: var(--background);
+  -webkit-touch-callout: none;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--foreground) !important;
+}
+
+li,
+a {
+  list-style: none;
+  text-decoration: none;
+  -webkit-transition: 0.25ms;
+  transition: 0.25ms;
+  color: var(--foreground);
+}
+
+a:hover {
+  color: var(--gold-highlight-color);
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  will-change: transform, opacity;
+}
+
+#root::-moz-selection {
+  background: var(--foreground) !important;
+}
+
+#root::selection {
+  background: var(--foreground) !important;
+}
+
+#root::-moz-selection {
+  background: var(--foreground) !important;
+  color: var(--background) !important;
+}
