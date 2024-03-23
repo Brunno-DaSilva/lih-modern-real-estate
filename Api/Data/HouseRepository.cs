@@ -15,6 +15,6 @@ public class HouseRepository: IHouseRepository
 
     public async Task<List<HouseDto>> GetAll()
     {
-        return await context.Houses.Select(h => new HouseDto(h.Id, h.Price, h.Address, h.Country, h.Description)).ToListAsync();
+        return await context.Houses.Select(h => new HouseDto(h.Id, h.Price, h.Address, h.Country, h.Description,h.Photo)).ToListAsync();
     }
 }
