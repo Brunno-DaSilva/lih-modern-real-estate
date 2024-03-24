@@ -1,4 +1,4 @@
-import logo from "./LIH-MODERN-LOGO.png";
+import { Logo } from "../../component/Logo/Logo";
 import "./Header.css";
 
 type Header = {
@@ -9,7 +9,7 @@ const Header = ({ subtitle }: Header) => {
   return (
     <header className="header">
       <div>
-        <img src={logo} className="header__logo" alt="LIH-MODERN-LOGO" />
+        <Logo />
       </div>
       <div>{subtitle}</div>
     </header>

@@ -25,6 +25,8 @@ const HouseList = () => {
         <thead>
           <tr>
             <th>Address</th>
+            <th>City</th>
+            <th>ZipCode</th>
             <th>Country</th>
             <th>Asking Price</th>
           </tr>
@@ -34,6 +36,8 @@ const HouseList = () => {
             houses.map((h: House) => (
               <tr key={h.id}>
                 <td>{h.address}</td>
+                <td>{h.city}</td>
+                <td>{h.zipCode}</td>
                 <td>{h.country}</td>
                 <td>{h.price}</td>
               </tr>
