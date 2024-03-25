@@ -8,6 +8,3 @@ export type House = {
   description: string;
   photo: string;
 };
-export interface Logo {
-  // Define properties for the logo component
-}
