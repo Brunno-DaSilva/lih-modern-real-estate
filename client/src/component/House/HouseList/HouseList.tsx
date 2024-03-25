@@ -1,18 +1,8 @@
-import { useEffect, useState } from "react";
 import { House } from "../../../types/house";
-import { config } from "../../../config";
+import useFetchHouses from "../../../Hooks/HouseHooks";
 
 const HouseList = () => {
-  const [houses, setHouses] = useState<House[]>([]);
-
-  useEffect(() => {
-    const fetchAllHouses = async () => {
-      const response = await fetch(`${config.BASE_API_URL}/houses`);
-      const houses = await response.json();
-      setHouses(houses);
-    };
-    fetchAllHouses();
-  }, []);
+  const { data } = useFetchHouses();
 
   return (
     <div>
@@ -32,8 +22,8 @@ const HouseList = () => {
           </tr>
         </thead>
         <tbody>
-          {houses &&
-            houses.map((h: House) => (
+          {data &&
+            data.map((h: House) => (
               <tr key={h.id}>
                 <td>{h.address}</td>
                 <td>{h.city}</td>
